@@ -1,24 +1,30 @@
 ;(function ( $, win, doc, undefined ) {
 
-    $.fn.extend( {
-        "highLight": function ( options ) {
-            var opts = $.extend( {}, defaults, options );
-            this.each( function () {
+    var Beautifier = function ( ele, opt ) {
 
-                var $this = $(this);
-
-                $this.css( {
-                    backgroundColor: opts.background,
-                    color: opts.foreground
-                } )
-            } )
-            return this;
+        this.$element = ele,
+        this.defaults = {
+            'color': 'red',
+            'fontSize': '12px',
+            'textDecoration': 'none'
         }
-    } );
+        this.options = $.extend( {}, this.defaults, opt );
 
-    var defaults = {
-        foreground: 'red',
-        background: 'yellow'
+    }
+
+    Beautifier.prototype = {
+        beautify: function () {
+            return this.$element.css({
+                'color': this.options.color,
+                'fontSize': this.options.fontSize,
+                'textDecoration': this.options.textDecoration
+            })
+        }
+    }
+
+    $.fn.beau = function (options) {
+        var beautifier = new Beautifier(this, options);
+        return beautifier.beautify();
     }
 
 })( jQuery, window, document )
