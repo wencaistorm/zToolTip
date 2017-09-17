@@ -1,30 +1,36 @@
-;(function ( $, win, doc, undefined ) {
+;
+(function ($, win, doc, undefined) {
 
-    var Beautifier = function ( ele, opt ) {
+    var ZToolTip = function (self, opts) {
+        this.$ele = self;
+        this.defaults = {};
+        this.options = $.extend({}, this.defaults, opts);
 
-        this.$element = ele,
-        this.defaults = {
-            'color': 'red',
-            'fontSize': '12px',
-            'textDecoration': 'none'
+    }
+
+    ZToolTip.prototype = {
+        toolTip: function () {
+            var self = this;
+            var $ele = self.$ele;
+            var opts = self.options;
+
+            var titleText = $ele.attr("data-title")
+
+            var $tipEle = $("<span></span>")
+            $tipEle.text(titleText);
+            $('body').append($tipEle)
+
+            return this;
         }
-        this.options = $.extend( {}, this.defaults, opt );
-
     }
 
-    Beautifier.prototype = {
-        beautify: function () {
-            return this.$element.css({
-                'color': this.options.color,
-                'fontSize': this.options.fontSize,
-                'textDecoration': this.options.textDecoration
-            })
-        }
-    }
+    $
+        .fn
+        .extend({
+            ztooTip: function () {
+                var zTip = new ZToolTip(this);
+                return zTip.toolTip();
+            }
+        })
 
-    $.fn.beau = function (options) {
-        var beautifier = new Beautifier(this, options);
-        return beautifier.beautify();
-    }
-
-})( jQuery, window, document )
+})(jQuery, window, document)
