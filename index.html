@@ -12,26 +12,53 @@
             margin: 100px auto;
             position: relative;
         }
-        
+
         input {
             margin-top: 10px;
             width: 200px;
             height: 30px;
         }
-        </style>
+
+        .side-tool {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 9
+        }
+
+        .side-tool>ul>li {
+            border: 1px solid #dcdcdc;
+            list-style: none;
+        }
+
+        .side-tool>ul .button {
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: #000;
+            text-align: center;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
     <div id="div1">
-        <input id="input1" type="text" data-msg="请输入用户名请输入用户名请输入用户名请输入用户名请输入用户名"/>
+        <input id="input1" type="text" data-msg="请输入用户名请输入用户名请输入用户名请输入用户名请输入用户名" />
         <input id="input2" type="text" />
         <input id="input3" type="text" />
         <input id="input4" type="text" />
     </div>
+    <div class="side-tool">
+        <ul>
+            <li><a class="button" data-msg="回到顶部" href="javascript:;">top</a></li>
+            <li><a class="button" data-msg="分享文章" href="javascript:;">share</a></li>
+        </ul>
+    </div>
     <script src="./scripts/jquery.js"></script>
     <script src="./scripts/zFormHint.js"></script>
     <script>
-        
         var message = ["此项目不能为空", "您填写的邮箱地址不正确", "两次密码输入不一致"];
         $('#input1').formHint({
             message: 'Hello World',
@@ -51,6 +78,9 @@
             arrow: 'bottom'
         })
 
+        $(".button").each(function () {
+            $(this).formHint({ arrow: 'left' })
+        })
     </script>
 </body>
 
