@@ -61,22 +61,23 @@
     <script>
         var message = ["此项目不能为空", "您填写的邮箱地址不正确", "两次密码输入不一致"];
         $('#input1').formHint({
-            message: 'Hello World',
+            message: '请输入用户名',
             arrow: 'top',
             bgColor: 'red'
         })
         $('#input2').formHint({
-            message: 'Hello World',
+            message: '请输入密码',
             arrow: 'right'
         })
         $('#input3').formHint({
             message: 'Hello World',
             arrow: 'left'
         })
-        $('#input4').formHint({
+        var input = $('#input4').formHint({
             message: 'Hello World',
             arrow: 'bottom'
         })
+        console.log(input);
 
         $(".button").each(function () {
             $(this).formHint({ arrow: 'left' })

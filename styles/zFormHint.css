@@ -10,14 +10,10 @@
 }
 
 .form-hint-text {
-    border-radius: 3px;
-    padding: 5px;
-    /* height: 28px;
-    line-height: 28px; */
+    border-radius: 5px;
+    padding: 5px 10px;
     font-size: 12px;
     background-color: #117da3;
-    opacity: 0.65;
-    filter: alpha(opacity=65);
     zoom: 1;
     color: #FFF;
 }
@@ -31,7 +27,6 @@
     border-width: 5px;
     border-style: solid;
     border-image: initial;
-    opacity: 0.65;
 }
 .arrow-right {
     left: 0;
@@ -45,7 +40,7 @@
     top: 50%;
     margin-top: -5px;
     margin-right: -10px;
-    border-color:  transparent transparent   transparent #117da3;
+    border-color:  transparent transparent transparent #117da3;
 }
 .arrow-top {
     left: 50%;
@@ -60,4 +55,23 @@
     margin-top: -10px;
     margin-left: -5px;
     border-color:  transparent transparent #117da3 transparent;
+}
+
+/* theme */
+.form-hint-text {
+    background-color: #000;
+    color: #FFF;
+}
+
+.arrow-right {
+    border-color: transparent #000 transparent transparent;
+}
+.arrow-left {
+    border-color: transparent transparent transparent #000;
+}
+.arrow-top {
+    border-color: #000 transparent transparent transparent;
+}
+.arrow-bottom {
+    border-color: transparent transparent #000 transparent;
 }
