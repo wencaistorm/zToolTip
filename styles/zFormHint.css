@@ -36,24 +36,28 @@
 .arrow-right {
     left: 0;
     top: 50%;
-    transform: translate(-100%, -50%);
+    margin-top: -5px;
+    margin-left: -10px;
     border-color: transparent #117da3 transparent transparent;
 }
 .arrow-left {
     right: 0;
     top: 50%;
-    transform: translate(100%, -50%);
+    margin-top: -5px;
+    margin-right: -10px;
     border-color:  transparent transparent   transparent #117da3;
 }
 .arrow-top {
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 100%);
+    margin-bottom: -10px;
+    margin-left: -5px;
     border-color:  #117da3 transparent transparent transparent;
 }
 .arrow-bottom {
     left: 50%;
     top: 0;
-    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    margin-left: -5px;
     border-color:  transparent transparent #117da3 transparent;
 }
