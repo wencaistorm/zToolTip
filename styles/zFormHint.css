@@ -24,37 +24,31 @@
     margin: 0px;
     width: 0px;
     height: 0px;
-    border-width: 5px;
-    border-style: solid;
-    border-image: initial;
+    border: 5px solid transparent;
 }
 .arrow-right {
     left: 0;
     top: 50%;
     margin-top: -5px;
     margin-left: -10px;
-    border-color: transparent #117da3 transparent transparent;
 }
 .arrow-left {
     right: 0;
     top: 50%;
     margin-top: -5px;
     margin-right: -10px;
-    border-color:  transparent transparent transparent #117da3;
 }
 .arrow-top {
     left: 50%;
     bottom: 0;
     margin-bottom: -10px;
     margin-left: -5px;
-    border-color:  #117da3 transparent transparent transparent;
 }
 .arrow-bottom {
     left: 50%;
     top: 0;
     margin-top: -10px;
     margin-left: -5px;
-    border-color:  transparent transparent #117da3 transparent;
 }
 
 /* theme */
@@ -64,14 +58,32 @@
 }
 
 .arrow-right {
-    border-color: transparent #000 transparent transparent;
+    border-right-color: #000;
 }
 .arrow-left {
-    border-color: transparent transparent transparent #000;
+    border-left-color: #000;
 }
 .arrow-top {
-    border-color: #000 transparent transparent transparent;
+    border-top-color: #000;
 }
 .arrow-bottom {
-    border-color: transparent transparent #000 transparent;
+    border-bottom-color: #000;
+}
+/* theme2 */
+.form-hint-text {
+    background-color: lightblue;
+    color: blue;
+}
+
+.arrow-right {
+    border-right-color: lightblue;
+}
+.arrow-left {
+    border-left-color: lightblue;
+}
+.arrow-top {
+    border-top-color: lightblue;
+}
+.arrow-bottom {
+    border-bottom-color: lightblue;
 }
